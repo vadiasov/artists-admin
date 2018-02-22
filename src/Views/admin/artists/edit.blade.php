@@ -170,7 +170,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    { <label class="col-sm-3 control-label">Instagram account</label>
+                                    <label class="col-sm-3 control-label">Instagram account</label>
 
                                     <div class="col-sm-9">
                                         <input type="url" class="form-control" name="instagram"
@@ -192,7 +192,7 @@
                                 <!-- /.box-body -->
                                 <div class="box-footer">
                                     <a href="{{ route('admin/artists') }}" class="btn btn-default">Cancel</a>
-                                    <button type="submit" class="btn btn-info pull-right">Create</button>
+                                    <button type="submit" class="btn btn-info pull-right">Save</button>
                                 </div>
                                 <!-- /.box-footer -->
                             </div>

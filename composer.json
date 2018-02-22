@@ -1,6 +1,6 @@
 {
     "name": "vadiasov/artists-admin",
-    "description": "This package creates DB table artists and serves for CRUD operations with this DB table in administrative panel.",
+    "description": "This package creates DB table artists and serves CRUD operations with this DB table in administrative panel.",
     "license": "MIT",
     "type": "library",
     "require": {

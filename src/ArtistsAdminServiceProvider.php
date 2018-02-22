@@ -34,7 +34,6 @@ class ArtistsAdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/Translations' => resource_path('lang/vendor/artists'),
             __DIR__ . '/Migrations' => database_path('migrations'),
-            __DIR__ . '/Seeds' => database_path('seeds'),
         ]);
         
         if ($this->app->runningInConsole()) {
