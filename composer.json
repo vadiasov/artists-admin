@@ -1,0 +1,26 @@
+{
+    "name": "vadiasov/artists-admin",
+    "description": "This package creates DB table artists and serves for CRUD operations with this DB table in administrative panel.",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "author": {
+        "name": "Volodymyr Vadiasov ",
+        "email": "vadiasov.volodymyr@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vadiasov\\ArtistsAdmin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vadiasov\\ArtistsAdmin\\ArtistsAdminServiceProvider"
+            ]
+        }
+    }
+}
