@@ -99,6 +99,15 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Tags</label>
+
+                                    <?php
+                                    if (old('tags')) {
+                                        $arrayJs = '[' . implode(",", old('tags')) . ']';
+                                    } else {
+                                        $arrayJs = '[]';
+                                    }
+                                    ?>
+
                                     <div class="col-sm-9">
                                         <select class="form-control select2" multiple="multiple"
                                                 data-placeholder="Select Tags" name="tags[]"
@@ -114,7 +123,7 @@
                                     <label class="col-sm-3 control-label">Bio</label>
                                     <div class="col-sm-9">
                                             <div class="box-body pad">
-                                                <textarea id="editor1" name="editor1" rows="10" cols="80">Bio</textarea>
+                                                <textarea id="editor1" name="editor1" rows="10" cols="80">{{ old('editor1') }}</textarea>
                                             </div>
                                     </div>
                                     <!-- /.box -->
@@ -225,5 +234,8 @@
             // instance, using default configuration.
             CKEDITOR.replace('editor1')
         })
+
+        //    $('.select2').val(["1","2"]);
+        $('.select2').val({{ $arrayJs }});
     </script>
 @endsection

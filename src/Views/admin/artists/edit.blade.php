@@ -117,6 +117,11 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Tags</label>
+                                    <?php
+                                    if (old('genres')) {
+                                        $arrayJs = '[' . implode(",", old('genres')) . ']';
+                                    }
+                                    ?>
                                     <div class="col-sm-9">
                                         <select class="form-control select2" multiple="multiple"
                                                 data-placeholder="Select Tags" name="tags[]"
@@ -133,7 +138,7 @@
                                     <div class="col-sm-9">
                                         <div class="box-body pad">
                                             <textarea id="editor1" name="editor1" rows="10"
-                                                      cols="80">{{ $artist->bio }}</textarea>
+                                                      cols="80">{{ old('bio') ? old('bio') : $artist->bio }}</textarea>
                                         </div>
                                     </div>
                                     <!-- /.box -->
