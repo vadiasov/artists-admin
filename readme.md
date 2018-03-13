@@ -5,8 +5,6 @@ It includes a ServiceProvider to register the package and attach it to the outpu
 It includes migrations to create DB artists.
 Page Edit includes Photo of Artist. Admin can change it with cropping.
 
-Pacckage 
-
 ## Installation
 Add the package to root composer.json:
 ````

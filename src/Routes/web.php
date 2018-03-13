@@ -12,7 +12,7 @@
 //});
 
 // src/Routes/web.php
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web', 'admin']], function () {
     Route::get('admin/artists', 'Vadiasov\ArtistsAdmin\Controllers\ArtistsController@index')->name('admin/artists');
     Route::get('admin/artists/create', 'Vadiasov\ArtistsAdmin\Controllers\ArtistsController@create')->name('admin/artists/create');
     Route::post('admin/artists/create', 'Vadiasov\ArtistsAdmin\Controllers\ArtistsController@store');
@@ -23,11 +23,4 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('admin/artists/{id}/edit-image', 'Vadiasov\ArtistsAdmin\Controllers\ArtistsController@storeImage');
     Route::get('admin/artists/{id}/crop-image', 'Vadiasov\ArtistsAdmin\Controllers\ArtistsController@cropImage')->name('crop->image');
     Route::post('admin/artists/{id}/crop-image', 'Vadiasov\ArtistsAdmin\Controllers\ArtistsController@processImage');
-    
-    Route::get('admin/get-artist', 'Vadiasov\ArtistsAdmin\Controllers\ArtistsController@showUser');
-    
-    /* Demo Test */
-    Route::get('artists-test-todos', function(){
-        return 'Here goes the artists list';
-    });
 });
